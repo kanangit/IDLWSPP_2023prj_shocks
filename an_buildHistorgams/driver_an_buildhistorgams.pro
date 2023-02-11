@@ -1,5 +1,3 @@
-
-
   ;+
   ; :Description:
   ;Based upon the code driver_fp_2018unexpected_hists.pro,
@@ -38,7 +36,7 @@ PRO driver_an_buildHistorgams
   nB = FLOOR((yMax - yMin)/dY); number of bins
   yBins = DINDGEN(nB)*dY+yMin + dY/2
 
-  CD, 'C:\Users\kanton\OneDrive - University of Iowa\bDocs\prj_shocks\data20230207\soliton_240fps_63-1\analysis\20230208histog\04_code_an_trimandsave\'
+  CD, 'C:\Users\kanton\OneDrive - University of Iowa\bDocs\prj_shocks\data20230207\soliton_240fps_63-1\analysis\20230208histog\04_code_an_buildHistorgams\'
   CD, 'inputs'
   ;;s = readImageJK(/lowmem);
 
