@@ -112,5 +112,3 @@ PRO driver_an_buildHistorgams
   WRITE_CSV, filename, timeT, max_pos, HEADER = colhead, TABLE_HEADER = thead
   print, "maxDensity =", MAX(maxDen)
 END
-
-END
