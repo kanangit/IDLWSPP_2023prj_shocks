@@ -8,22 +8,22 @@
 ;v.0.17 from instability computer. 
 ;v.0.16 the routine seletcs the region of interest and saves as a new file. For huge files and small region of interests this could be a real time saver
 PRO driver_trimandsave
-curDate='20230209'
-leftBorder = 178.0d
-rightBorder= 300.0d;
-yMin = 420.0d;
-yMax = 1392.0d
+curDate='20230213'
+leftBorder = 56.0d
+rightBorder= 440.0d;
+yMin = 120.0d;
+yMax = 1412.0d
 iBegin = 0 
-iEnd = 299
+iEnd = 600
 ;leftBorder = 550.0d
 ;rightBorder= 850.0d;
 ;yMin = 0.0d;
 ;yMax = 1215.0d
 ;iBegin=1000 
 ;iEnd = 1250
-coreName = STRCOMPRESS('ff'+STRING(iBegin)+'-' + STRING(iEnd) + '_' + STRING(curDate) + 'positionTrimmedForVid063_1', /REMOVE_ALL)
+coreName = STRCOMPRESS('ff'+STRING(iBegin)+'-' + STRING(iEnd) + '_' + STRING(curDate) + 'positionTrimmedFor_soliton_240fps_73', /REMOVE_ALL)
 
-CD, 'C:\Users\kanton\OneDrive - University of Iowa\bDocs\prj_shocks\data20230207\soliton_240fps_63-1\analysis\20230208histog\03_code_an_trimandsave\'
+CD, 'g:\My Drive\workAppState\prj_shocks\expData\data20230207\soliton_240fps_73\analysis\20230211histog\03_code_an_trimandsave\'
 CD, 'inputs'
 
 s = readTrackPy()
