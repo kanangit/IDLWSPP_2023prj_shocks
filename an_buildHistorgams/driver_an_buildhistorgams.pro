@@ -12,13 +12,13 @@
   ;-
 PRO driver_an_buildHistorgams
 
-  curDate='20230211'
+  curDate='20230213'
   framesSkip = 1
   ;define borders of the region of interest
-  leftBorder = 178.0d
-  rightBorder= 300.0d;
-  yMin = 420.0d;
-  yMax = 1392.0d
+leftBorder = 56.0d
+rightBorder= 440.0d;
+yMin = 120.0d;
+yMax = 1412.0d
   ;start and and frames
   iBegin = 0
   ;iEnd =  1168 see below
@@ -36,7 +36,7 @@ PRO driver_an_buildHistorgams
   nB = FLOOR((yMax - yMin)/dY); number of bins
   yBins = DINDGEN(nB)*dY+yMin + dY/2
 
-  CD, 'g:\My Drive\workAppState\prj_shocks\expData\data20230207\soliton_240fps_63-1\analysis\20230208histog\04_code_an_buildHistorgams\'
+  CD, 'g:\My Drive\workAppState\prj_shocks\expData\data20230207\soliton_240fps_73\analysis\20230211histog\04_code_an_buildHistorgams\'
   CD, 'inputs'
   ;;s = readImageJK(/lowmem);
 
@@ -52,9 +52,10 @@ PRO driver_an_buildHistorgams
   ind = WHERE(s.X LE rightBorder AND s.X GE leftBorder $
     AND s.Y LE ymax AND s.Y GE yMin)
   time = s.iframe[ind] ;array to track time
-  Yroi = yMax - (s.Y[ind] - yMin) ;because the vertical screen coordinates
+  ;Yroi = yMax - (s.Y[ind] - yMin) ;because the vertical screen coordinates   ;are from top to bottom, we make this change of variables
+  Yroi = s.Y[ind]
   Xroim = s.X[ind]
-  ;are from top to bottom, we make this change of variables
+
 
 
 
