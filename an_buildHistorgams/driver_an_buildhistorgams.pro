@@ -28,7 +28,7 @@ PRO driver_an_buildHistorgams
 
   ;aWignerZeiss = 7.191d ;Wigner-Zeiss radius in pixels
   ;dy = 3.0d * aWignerZeiss
-  dy = 14.0d
+  dy = 30.0d
   ;pixelsInMM = 29.790d
   ;frameRate = 800.0d ;frames/s
   
@@ -36,14 +36,14 @@ PRO driver_an_buildHistorgams
   nB = FLOOR((yMax - yMin)/dY); number of bins
   yBins = DINDGEN(nB)*dY+yMin + dY/2
 
-  CD, 'C:\Users\kanton\OneDrive - University of Iowa\bDocs\prj_shocks\data20230207\soliton_240fps_63-1\analysis\20230208histog\04_code_an_buildHistorgams\'
+  CD, 'g:\My Drive\workAppState\prj_shocks\expData\data20230207\soliton_240fps_63-1\analysis\20230208histog\04_code_an_buildHistorgams\'
   CD, 'inputs'
   ;;s = readImageJK(/lowmem);
 
   filenam = DIALOG_PICKFILE(/READ, FILTER = '*.sav')
   RESTORE, filenam
 
-  CD, '..\outputs\'
+  CD, '..\outputs_binsize30px\'
 
   iEnd = MAX(s.iframe)
   coreName = STRCOMPRESS('ff'+STRING(iBegin)+'-' + STRING(iEnd) + '_' + STRING(curDate))
